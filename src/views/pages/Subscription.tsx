@@ -9,7 +9,7 @@ const Subscription = () => {
   useEffect(() => {
     const getVideos = async () => {
       const response = await axios.post(
-        "/api/video/getSubscriptionVideos",
+        `${process.env.REACT_APP_API_URL}/api/video/getSubscriptionVideos`,
         {
           userFrom: userId,
         },
